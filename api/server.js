@@ -1,9 +1,7 @@
 import Fastify from 'fastify'
-import pump from 'pump'
-import split from 'split2'
 import { sanitizeMessage } from '../utils/sanitizeMessage.js'
 import { generate_text } from './ai/index.js'
-import { send_msg_to_whatsapp } from './msg/index.js'
+import { new_account, send_msg_to_whatsapp } from './msg/index.js'
 
 const fastify = Fastify({
   logger: true
